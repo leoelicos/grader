@@ -1,4 +1,4 @@
-const Student = require('./Student');
-const Course = require('./Course');
+import Student from './Student.js'
+import Course from './Course.js'
 
-module.exports = { Student, Course };
+export { Student, Course }
