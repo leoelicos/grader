@@ -1,5 +1,6 @@
 {
   "name": "28-stu-mini-project",
+  "type": "module",
   "version": "1.0.1",
   "description": "Mongoose back-end project - Develop",
   "main": "index.js",
