@@ -1,5 +1,5 @@
-const { Schema, model } = require('mongoose');
-const assignmentSchema = require('./Assignment');
+import { Schema, model } from 'mongoose'
+import assignmentSchema from './Assignment.js'
 
 // Schema to create Student model
 const studentSchema = new Schema(
@@ -7,27 +7,27 @@ const studentSchema = new Schema(
     first: {
       type: String,
       required: true,
-      max_length: 50,
+      max_length: 50
     },
     last: {
       type: String,
       required: true,
-      max_length: 50,
+      max_length: 50
     },
     github: {
       type: String,
       required: true,
-      max_length: 50,
+      max_length: 50
     },
-    assignments: [assignmentSchema],
+    assignments: [assignmentSchema]
   },
   {
     toJSON: {
-      getters: true,
-    },
+      getters: true
+    }
   }
-);
+)
 
-const Student = model('student', studentSchema);
+const Student = model('student', studentSchema)
 
-module.exports = Student;
+export default Student
