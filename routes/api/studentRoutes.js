@@ -1,5 +1,6 @@
-const router = require('express').Router()
-const {
+import Router from 'express'
+const router = Router()
+import {
   getStudents,
   createStudent,
   getSingleStudent,
@@ -7,7 +8,7 @@ const {
   addAssignment,
   removeAssignment
   //
-} = require('../../controllers/studentController')
+} from '../../controllers/studentController.js'
 
 router //
   .route('/')
@@ -27,4 +28,4 @@ router //
   .route('/:studentId/assignments/:assignmentId')
   .delete(removeAssignment)
 
-module.exports = router
+export default router
