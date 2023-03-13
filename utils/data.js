@@ -21,4 +21,4 @@ const getRandomAssignments = (int) => {
 }
 
 // Export the functions for use in seed.js
-module.exports = { getRandomName, getRandomAssignments }
+export   { getRandomName, getRandomAssignments }
