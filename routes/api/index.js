@@ -1,8 +1,10 @@
-const router = require('express').Router();
-const courseRoutes = require('./courseRoutes');
-const studentRoutes = require('./studentRoutes');
+import Router from 'express'
+const router = Router()
 
-router.use('/courses', courseRoutes);
-router.use('/students', studentRoutes);
+import courseRoutes from './courseRoutes.js'
+import studentRoutes from './studentRoutes.js'
 
-module.exports = router;
+router.use('/courses', courseRoutes)
+router.use('/students', studentRoutes)
+
+export default router
