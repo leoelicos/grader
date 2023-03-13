@@ -1,11 +1,12 @@
-const router = require('express').Router()
-const {
+import Router from 'express'
+const router = Router()
+import {
   getCourses,
   createCourse,
   getSingleCourse,
   updateCourse,
   deleteCourse //
-} = require('../../controllers/courseController.js')
+} from '../../controllers/courseController.js'
 
 router //
   .route('/')
@@ -18,4 +19,4 @@ router //
   .put(updateCourse)
   .delete(deleteCourse)
 
-module.exports = router
+export default router
