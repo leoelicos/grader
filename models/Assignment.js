@@ -1,34 +1,34 @@
-const { Schema, Types } = require('mongoose');
+import { Schema, Types } from 'mongoose'
 
 const assignmentSchema = new Schema(
   {
     assignmentId: {
       type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
+      default: () => new Types.ObjectId()
     },
     assignmentName: {
       type: String,
       required: true,
       maxlength: 50,
       minlength: 4,
-      default: 'Unnamed assignment',
+      default: 'Unnamed assignment'
     },
     score: {
       type: Number,
       required: true,
-      default: () => Math.floor(Math.random() * (100 - 70 + 1) + 70),
+      default: () => Math.floor(Math.random() * (100 - 70 + 1) + 70)
     },
     createdAt: {
       type: Date,
-      default: Date.now,
-    },
+      default: Date.now
+    }
   },
   {
     toJSON: {
-      getters: true,
+      getters: true
     },
-    id: false,
+    id: false
   }
-);
+)
 
-module.exports = assignmentSchema;
+export default assignmentSchema
