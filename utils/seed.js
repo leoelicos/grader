@@ -1,9 +1,8 @@
-const connection = require('../config/connection')
-const { Course, Student } = require('../models')
+import connection from '../config/connection.js'
+import { Course, Student } from '../models/index.js'
 
-const { getRandomName, getRandomAssignments } = require('./data')
-const mongoose = require('mongoose')
-const ObjectId = mongoose.Types.ObjectId
+import { getRandomName, getRandomAssignments } from './data.js'
+
 connection.on('error', (err) => err)
 
 connection.once('open', async () => {
